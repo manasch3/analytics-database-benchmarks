@@ -1,0 +1,98 @@
+####################################
+# GLOBAL OS / EDITOR
+####################################
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+####################################
+# PYTHON
+####################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+.env
+.env.*
+.venv/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+
+####################################
+# DOCKER & CONTAINERS
+####################################
+docker-compose.override.yml
+
+####################################
+# BENCHMARK / LOAD TEST OUTPUT
+####################################
+*.out
+*.csv
+*.json
+benchmark_results/
+load_test_results/
+
+####################################
+# REDIS (v1)
+####################################
+v1-redis-counters/**/*.rdb
+v1-redis-counters/**/*.aof
+
+####################################
+# CLICKHOUSE (v2)
+####################################
+v2-clickhouse-analytics/**/clickhouse-data/
+v2-clickhouse-analytics/**/logs/
+v2-clickhouse-analytics/**/tmp/
+
+####################################
+# TIMESCALEDB / POSTGRES (v3)
+####################################
+v3-timescaledb-analytics/**/pgdata/
+v3-timescaledb-analytics/**/postgres-data/
+v3-timescaledb-analytics/**/wal/
+v3-timescaledb-analytics/**/logs/
+
+####################################
+# STARROCKS (v4) — VERY IMPORTANT
+####################################
+# FE metadata & logs
+v4-starrocks-analytics/fe-meta/
+v4-starrocks-analytics/fe-logs/
+
+# BE storage & logs (huge, auto-generated)
+v4-starrocks-analytics/be-storage/
+v4-starrocks-analytics/be-logs/
+
+# StarRocks runtime folders
+v4-starrocks-analytics/**/meta/
+v4-starrocks-analytics/**/datacache/
+v4-starrocks-analytics/**/persistent/
+v4-starrocks-analytics/**/tmp/
+v4-starrocks-analytics/**/error_log/
+
+####################################
+# SECURITY — NEVER COMMIT
+####################################
+*.pem
+*.key
+*.crt
+secrets/
+credentials/
+*.password
+
+####################################
+# KEEP PROJECT STRUCTURE CLEAN
+####################################
+!**/.gitkeep
+
